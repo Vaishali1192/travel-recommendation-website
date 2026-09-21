@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Recommendation</title>
+  <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+   <nav><h1>TravelBloom</h1>
+<ul>
+  <li><a href="./index.html" id="home">Home </a></li>
+  <li><a href="./travel_recommendation_about.html" id="about">About us </a></li>
+  <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us </a></li>
+ <div class="search-container">
+
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Enter a destination or keyword"
+  >
+
+  <button id="searchBtn">
+    Search
+  </button>
+
+  <button id="clearBtn">
+    Clear
+  </button>
+
+</div>
+  </li>
+
+</ul>
+</nav>
+<main class="hero">
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+<section class="contact-section">
+
+  <!-- Social Media Icons -->
+  <div class="social-icons">
+    <a href="#" aria-label="Twitter">♥</a>
+    <a href="#" aria-label="Facebook">f</a>
+    <a href="#" aria-label="Instagram">◎</a>
+    <a href="#" aria-label="YouTube">▶</a>
+  </div>
+
+  <div class="contact-container">
+
+    <!-- Left Content -->
+    <div class="contact-content">
+      <h1>CONTACT US</h1>
+      <p>Get in touch</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+
+      <form>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+ 
+
+    </main>
+<script src="./health_analysis.js"></script>
+</body>
+</html>

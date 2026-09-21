@@ -31,7 +31,7 @@ body {
 
   display: flex;
   align-items: center;
-
+flex-flow:column;
   background-image: url(
     "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=2400&q=85"
   );
@@ -259,5 +259,607 @@ body {
 
   .hero-content p {
     font-size: 15px;
+  }
+}
+
+.recommendation-section {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.recommendation-search {
+  display: flex;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.recommendation-search input {
+  flex: 1;
+  padding: 14px 18px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 16px;
+}
+
+.recommendation-search button {
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #087f7a;
+  color: white;
+
+  cursor: pointer;
+}
+
+.recommendation-search button:hover {
+  background: #065f5b;
+}
+
+
+/* Results */
+
+.recommendation-results {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+
+/* Card */
+
+.recommendation-card {
+  overflow: hidden;
+
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Image */
+
+.recommendation-card img {
+  width: 100%;
+
+  height: 200px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* Content */
+
+.recommendation-card-content {
+  padding: 20px;
+}
+
+.recommendation-card-content h2 {
+  margin: 0 0 10px;
+
+  color: #123;
+
+  font-size: 22px;
+}
+
+.recommendation-card-content p {
+  color: #555;
+
+  line-height: 1.5;
+
+  font-size: 14px;
+}
+
+
+/* Visit button */
+
+.visit-btn {
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #087f7a;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.visit-btn:hover {
+  background: #065f5b;
+}
+
+
+/* No results */
+
+.no-results {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  padding: 40px;
+}
+
+/* Our Team Section */
+.team-section {
+  width: 100%;
+  min-height: 210px;
+  color: white;
+  padding: 30px 6%;
+  box-sizing: border-box;
+}
+
+/* Main layout */
+.team-container {
+  
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 220px repeat(3, 1fr);
+  align-items: center;
+  gap: 25px;
+}
+
+/* Our Team heading */
+.team-title {
+  display: flex;
+  align-items: center;
+}
+
+.team-title h2 {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+  font-size: 60px;
+  line-height: 1.05;
+  font-weight: 700;
+
+  color: white;
+}
+
+/* Team member */
+.team-member {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Profile circle */
+.profile-icon {
+  width: 42px;
+  height: 42px;
+
+  margin: 0 auto 12px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon span {
+  font-size: 24px;
+  filter: grayscale(1);
+}
+
+/* Name */
+.team-member h3 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: white;
+}
+
+/* Description */
+.team-member p {
+  margin: 0 0 12px;
+
+  font-size: 14px;
+  line-height: 1.25;
+
+  color: white;
+}
+
+/* Role button */
+.role {
+  display: inline-block;
+
+  background: #075985;
+
+  padding: 8px 22px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: white;
+}
+
+/* Hover effect */
+.team-member {
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member:hover .role {
+  background: #0b6f9c;
+}
+
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .team-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .team-title {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .team-title h2 {
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .team-section {
+    padding: 40px 20px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .team-title {
+    grid-column: auto;
+  }
+
+  .team-title h2 {
+    font-size: 45px;
+  }
+
+  .team-member p {
+    font-size: 14px;
+  }
+}
+
+
+
+/* =========================
+   Contact Section
+   ========================= */
+
+.contact-section {
+  min-height: calc(100vh - 78px);
+
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 30, 50, 0.15),
+      rgba(0, 30, 50, 0.15)
+    ),
+    url("https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=1800&q=85");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+
+/* =========================
+   Main Container
+   ========================= */
+
+.contact-container {
+  min-height: calc(100vh - 78px);
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 40px 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 520px;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+
+/* =========================
+   Left Content
+   ========================= */
+
+.contact-content {
+  padding-left: 20px;
+}
+
+.contact-content h1 {
+  margin: 0;
+
+  font-size: 68px;
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  color: white;
+}
+
+.contact-content p {
+  margin-top: 25px;
+
+  font-size: 20px;
+
+  color: white;
+}
+
+
+/* =========================
+   Contact Form
+   ========================= */
+
+.contact-form {
+  width: 100%;
+
+  padding: 30px;
+
+  background: rgba(0, 30, 50, 0.20);
+
+  border-radius: 2px;
+
+  backdrop-filter: blur(2px);
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: white;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 6px;
+
+  background: rgba(0, 30, 50, 0.10);
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.form-group input {
+  height: 38px;
+}
+
+.form-group textarea {
+  height: 96px;
+
+  resize: vertical;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* Input focus */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: white;
+
+  background: rgba(0, 30, 50, 0.25);
+}
+
+
+/* =========================
+   Submit Button
+   ========================= */
+
+.contact-form button {
+  width: 100%;
+
+  height: 40px;
+
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #087f7a;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease,
+              transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #096b67;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   Social Icons
+   ========================= */
+
+.social-icons {
+  position: absolute;
+
+  left: 18px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+
+  z-index: 10;
+}
+
+.social-icons a {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 23px;
+  font-weight: bold;
+
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 50px 60px;
+  }
+
+  .contact-content {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .contact-content h1 {
+    font-size: 52px;
+  }
+
+  .contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .contact-container {
+    padding: 40px 25px;
+  }
+
+  .contact-content h1 {
+    font-size: 42px;
+  }
+
+  .contact-content p {
+    font-size: 18px;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .social-icons {
+    position: static;
+
+    transform: none;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    padding-top: 20px;
+  }
+
+  .contact-section {
+    min-height: 100vh;
   }
 }

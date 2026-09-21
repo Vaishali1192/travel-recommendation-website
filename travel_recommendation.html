@@ -8,14 +8,32 @@
 <body>
    <nav><h1>TravelBloom</h1>
 <ul>
-  <li><a href="./index.html" id="home">Home </a></li>
+  <li><a href="./travel_recommendation.html" id="home">Home </a></li>
   <li><a href="./travel_recommendation_about.html" id="about">About us </a></li>
   <li><a href="./travel_recommendation_contact.html" id="contact">Contact Us </a></li>
+  <div class="search-container">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Enter a destination or keyword"
+    >
+  
+    <button id="searchBtn">
+      Search
+    </button>
+  
+    <button id="clearBtn">
+      Clear
+    </button>
+  
+  </div>
 
   </li>
 
 </ul>
 </nav>
+<div id="recommendationResults" class="recommendation-results"></div>
 <main class="hero">
 
     <!-- Dark overlay -->
@@ -43,6 +61,6 @@
   
 
     </main>
-<script src="./health_analysis.js"></script>
+<script src="./travel_recommendation.js"></script>
 </body>
 </html>
