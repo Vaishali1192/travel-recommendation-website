@@ -106,8 +106,6 @@ flex-flow:column;
 
   width: min(820px, 70%);
 
-  margin-left: 7%;
-
   color: white;
 }
 
@@ -411,11 +409,11 @@ flex-flow:column;
 
 /* Our Team Section */
 .team-section {
-  width: 100%;
-  min-height: 210px;
-  color: white;
-  padding: 30px 6%;
-  box-sizing: border-box;
+    min-height: 210px;
+    color: white;
+    
+    box-sizing: border-box;
+    width: min(820px, 70%);
 }
 
 /* Main layout */
@@ -427,12 +425,14 @@ flex-flow:column;
   grid-template-columns: 220px repeat(3, 1fr);
   align-items: center;
   gap: 25px;
+  background: rgba(0, 0, 0, 0.35);
 }
 
 /* Our Team heading */
 .team-title {
   display: flex;
   align-items: center;
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .team-title h2 {
